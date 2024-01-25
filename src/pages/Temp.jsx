@@ -98,7 +98,7 @@ const Temp = () => {
 
         return (
             <div className='h-screen flex-wrap flex-1 justify-center items-center bg-cover bg-no-repeat pt-2'
-            style={{backgroundImage: `url(https://cdn.gencraft.com/prod/user/bc1c5a55-dd51-4368-be0a-a08572c2a360/da583ef1-e87a-4b2f-8514-d0941aea8f0b/image/image0_0.jpg?Expires=1706099533&Signature=XduT7pexOX4b8R7Eb87WWPtDKK~r7vOHqFdZRxbZWC2FJY1KOtIqFeL1P0c8ADtiGGhERaG0GSaEzn6u8BmFAaNSgXeR4VFcJpwQHX1Ba-Uwpi~Tw0peQOKenpRklC6Ot7cbm3Ebg7TM4Qm49g6aG2cfATJ0~NZ8od~0t7av-eZCSJxlh1NNU0aPba6vp-Q9ppltmEi8wSBmW2NLqLmdwN-q2foaxvfFiKBUDpGPKSGs58n7Nw-mpcXYrYibdfkLOETypqoLsSZKTypXEQcOU1eSl1CXBnajhZ5aWNogBSkkGsDI9Sa7yBPKlcjCjl9zYXJ6q3iRHO40eLOIRXGf-A__&Key-Pair-Id=K3RDDB1TZ8BHT8)`, backgroundSize: 'cover', backgroundPosition: 'center'}}
+            style={{backgroundImage: `url(https://images.pexels.com/photos/707344/pexels-photo-707344.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)`, backgroundSize: 'cover', backgroundPosition: 'center'}}
           >
             <p className='text-red-500 text-3xl font-serif font-bold text-center pt-8'>Temperature Converter Program{'\n'}</p>
             <p className='text-cream text-xl font-serif italic text-center pt-4 pb-10'>
@@ -162,12 +162,11 @@ const Temp = () => {
             <div className='w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30 size-28'>
               <h1 className='text-biru font-serif font-bold text-center text-xl'>How It Works...</h1>
               <p className="text-cream font-serif font-bold text-center text-lg">Hasil dari °{suhuSatu.toUpperCase()} to °{suhuDua.toUpperCase()}= {persamaan}</p>
-      
             </div>
-            <div className='flex-wrap items-center justify-center mx-auto w-full max-w-md px-72 pt-8'>
+            <div className='flex-wrap items-center justify-center mx-auto w-full max-w-md px-72 pt-5'>
             <NavLink to="/">
             <button>
-             <FontAwesomeIcon className='items-center justify-center bg-red-500 rounded-sm size-7' icon={faHouse}/>
+             <FontAwesomeIcon className='items-center justify-center bg-red-500 rounded-sm size-6' icon={faHouse}/>
             </button>
             </NavLink>
             </div>
