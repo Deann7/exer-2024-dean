@@ -1,20 +1,20 @@
-import React from 'react';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import Temp from './pages/Temp';
-import Curr from './pages/Curr';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import Home from './pages/Home';
+import Curr from './pages/Curr';
+import Temp from './pages/Temp';
+
 
 const App = () => {
   return (
-    <BrowserRouter>
-        <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/curr" element={<Curr />} />
-            <Route path="/temp" element={<Temp />} />
-        </Routes>
-    </BrowserRouter>
- 
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/curr" element={<Curr />} />
+        <Route path="/temp" element={<Temp />} />
+      </Routes>
+    </HashRouter>
   );
-}
+};
+
 
 export default App;
