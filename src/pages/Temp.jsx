@@ -98,15 +98,15 @@ const Temp = () => {
 
         return (
             <div className='h-screen flex-wrap flex-1 justify-center items-center bg-cover bg-no-repeat pt-2'
-            style={{backgroundImage: `url(https://images.pexels.com/photos/707344/pexels-photo-707344.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)`, backgroundSize: 'cover', backgroundPosition: 'center'}}
+            style={{backgroundImage: `url(https://images.pexels.com/photos/1054198/pexels-photo-1054198.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)`, backgroundSize: 'cover', backgroundPosition: 'center'}}
           >
-            <p className='text-red-500 text-3xl font-serif font-bold text-center pt-8'>Temperature Converter Program{'\n'}</p>
+            <p className='text-biru text-3xl font-serif font-bold text-center pt-8'>Temperature Converter Program{'\n'}</p>
             <p className='text-cream text-xl font-serif italic text-center pt-4 pb-10'>
         <TypeAnimation
           sequence={[
             '"Temperature: nature silent maestro."',
             1500,
-            'Degrees tell stories of energy',
+            '"Degrees tell stories of energy"',
             1500,
             '"Heat and cold, a delicate balance."',
             1500,
