@@ -163,7 +163,7 @@ const Temp = () => {
               <h1 className='text-biru font-serif font-bold text-center text-xl'>How It Works...</h1>
               <p className="text-cream font-serif font-bold text-center text-lg">Hasil dari °{suhuSatu.toUpperCase()} to °{suhuDua.toUpperCase()}= {persamaan}</p>
             </div>
-            <div className='flex-wrap items-center justify-center mx-auto w-full max-w-md px-72 pt-5'>
+            <div className='flex-wrap items-center justify-center mx-auto w-full max-w-md px-72 pt-4'>
             <NavLink to="/">
             <button>
              <FontAwesomeIcon className='items-center justify-center bg-red-500 rounded-sm size-6' icon={faHouse}/>
