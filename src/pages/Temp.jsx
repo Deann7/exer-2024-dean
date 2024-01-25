@@ -161,7 +161,7 @@ const Temp = () => {
             <div className='pt-4'>
             <div className='w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30 size-28'>
               <h1 className='text-biru font-serif font-bold text-center text-xl'>How It Works...</h1>
-              <p className="text-cream font-serif font-bold text-center text-lg">Hasil dari °{suhuSatu.toUpperCase()} -> °{suhuDua.toUpperCase()}= {persamaan}</p>
+              <p className="text-cream font-serif font-bold text-center text-lg">Hasil dari °{suhuSatu.toUpperCase()} to °{suhuDua.toUpperCase()}= {persamaan}</p>
       
             </div>
             <div className='flex-wrap items-center justify-center mx-auto w-full max-w-md px-72 pt-8'>
