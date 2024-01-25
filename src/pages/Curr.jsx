@@ -110,7 +110,7 @@ function Curr() {
 
       </div>
       </div>
-      <div className='flex-wrap items-center justify-center mx-auto w-full max-w-md px-72 pt-5'>
+      <div className='flex-wrap items-center justify-center mx-auto w-full max-w-md px-72 pt-4'>
             <NavLink to="/">
             <button>
              <FontAwesomeIcon className='items-center justify-center bg-red-500 rounded-sm size-6' icon={faHouse}/>
