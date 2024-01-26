@@ -1,5 +1,7 @@
-import React, { useId } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import { useId } from 'react-id-generator';
+
 
 function InputBox({
   label,
@@ -11,51 +13,52 @@ function InputBox({
   currrencyDisabled = false,
   className = '',
 }) {
-  const id = useId()
-  const isAmountProvided = amount !== '';
+  const id = useId(); // Jika melakukan klik pada id maka dia akan langsung ke input amount
+  const isAmountProvided = amount !== ''; // Handling untuk input amount
   return (
     <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
-        <div className='w-1-2'>
-            <label   className='text-black/40 mb-2 inline-block'>{label}</label>
-            <input 
-            id = {id}
-            type="number"
-            className='outline-none w-full bg-transparent py-1.5'
-            placeholder={isAmountProvided ? 'Amount' : 'Amount'}
-            disabled={amountDisabled}
-            value={amount || ''}
-            onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}
-             />
-        </div>
-        <div className='w-1/2 flex flex-wrap justify-end text-right'>
+      <div className='w-1/2'>
+        <label className='text-black/40 mb-2 inline-block' htmlFor={id}>
+          {label}
+        </label>
+        <input
+          id={id}
+          type="number"
+          className='outline-none w-full bg-transparent py-1.5'
+          placeholder={isAmountProvided ? 'Amount' : 'Amount'}
+          disabled={amountDisabled}
+          value={amount || ''}
+          onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}
+        />
+      </div>
+      <div className='w-1/2 flex flex-wrap justify-end text-right'>
         <p className="text-black/40 mb-2 w-full">Currency Type</p>
-        <select 
-        className='rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none'
-        value={selectedCurrency}
-        disabled={currrencyDisabled}
-        onChange={(e) => { onCurrencyChange && onCurrencyChange(e.target.value)}}
+        <select
+          className='rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none'
+          value={selectedCurrency}
+          disabled={currrencyDisabled}
+          onChange={(e) => onCurrencyChange && onCurrencyChange(e.target.value)}
         >
           <option value='idr'>IDR</option>
           <option value='usd'>USD</option>
           <option value='btc'>BTC</option>
           <option value='jpy'>JPY</option>
-
         </select>
-        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-InputBox.propTypes = {
-    label: PropTypes.string.isRequired,
-    amount: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    onAmountChange: PropTypes.func.isRequired,
-    onCurrencyChange: PropTypes.func.isRequired,
-    currencyOptions: PropTypes.array.isRequired,
-    selectedCurrency: PropTypes.string.isRequired,
-    amountDisabled: PropTypes.bool.isRequired,
-    currrencyDisabled: PropTypes.bool.isRequired,
-    className: PropTypes.string.isRequired,
+InputBox.propTypes = { // tipe data
+  label: PropTypes.string.isRequired,
+  amount: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  onAmountChange: PropTypes.func.isRequired, 
+  onCurrencyChange: PropTypes.func.isRequired,
+  currencyOptions: PropTypes.array.isRequired, 
+  selectedCurrency: PropTypes.string.isRequired,
+  amountDisabled: PropTypes.bool.isRequired,
+  currrencyDisabled: PropTypes.bool.isRequired,
+  className: PropTypes.string.isRequired,
 };
 
 export default InputBox;
