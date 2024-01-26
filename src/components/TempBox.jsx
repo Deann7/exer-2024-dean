@@ -13,6 +13,7 @@ function TempBox({
 }) 
 {
   const id = useId()
+  const isAmountProvided = amount !== '';
   return (
     <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
         <div className='w-1-2'>
@@ -21,7 +22,7 @@ function TempBox({
             id = {id}
             type="number"
             className='outline-none w-full bg-transparent py-1.5'
-            placeholder='Amount'
+            placeholder={isAmountProvided ? 'Amount' : 'Amount'}
             disabled={banyakDisabled}
             value={amount}
             onChange={(e) => perubahanHasil && perubahanHasil (Number(e.target.value))}
