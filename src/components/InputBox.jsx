@@ -12,6 +12,7 @@ function InputBox({
   className = '',
 }) {
   const id = useId()
+  const isAmountProvided = amount !== '';
   return (
     <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
         <div className='w-1-2'>
@@ -20,9 +21,9 @@ function InputBox({
             id = {id}
             type="number"
             className='outline-none w-full bg-transparent py-1.5'
-            placeholder='Amount'
+            placeholder={isAmountProvided ? 'Amount' : 'Amount'}
             disabled={amountDisabled}
-            value={amount}
+            value={amount || ''}
             onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}
              />
         </div>
@@ -47,7 +48,7 @@ function InputBox({
 
 InputBox.propTypes = {
     label: PropTypes.string.isRequired,
-    amount: PropTypes.number.isRequired,
+    amount: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     onAmountChange: PropTypes.func.isRequired,
     onCurrencyChange: PropTypes.func.isRequired,
     currencyOptions: PropTypes.array.isRequired,
