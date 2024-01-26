@@ -98,10 +98,10 @@ const Temp = () => {
 
         return (
             <div className='h-screen flex-wrap flex-1 justify-center items-center bg-cover bg-no-repeat pt-2'
-            style={{backgroundImage: `url(https://images.pexels.com/photos/1054198/pexels-photo-1054198.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)`, backgroundSize: 'cover', backgroundPosition: 'center'}}
+            style={{backgroundImage: `url(https://images.pexels.com/photos/8321535/pexels-photo-8321535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)`, backgroundSize: 'cover', backgroundPosition: 'center'}}
           >
-            <p className='text-biru text-3xl font-serif font-bold text-center pt-8'>Temperature Converter Program{'\n'}</p>
-            <p className='text-cream text-xl font-serif italic text-center pt-4 pb-10'>
+            <p className='text-cream text-3xl font-serif font-bold text-center pt-8'>Temperature Converter Program{'\n'}</p>
+            <p className='text-biru text-xl font-serif italic text-center pt-4 pb-10'>
         <TypeAnimation
           sequence={[
             '"Temperature: nature silent maestro."',
@@ -160,8 +160,8 @@ const Temp = () => {
             </div>
             <div className='pt-4'>
             <div className='w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30 size-28'>
-              <h1 className='text-biru font-serif font-bold text-center text-xl'>How It Works...</h1>
-              <p className="text-cream font-serif font-bold text-center text-lg">Hasil dari °{suhuSatu.toUpperCase()} to °{suhuDua.toUpperCase()}= {persamaan}</p>
+              <h1 className='text-cream font-serif font-bold text-center text-xl'>How It Works...</h1>
+              <p className="text-biru font-serif font-bold text-center text-lg">Hasil dari °{suhuSatu.toUpperCase()} to °{suhuDua.toUpperCase()}= {persamaan}</p>
             </div>
             <div className='flex-wrap items-center justify-center mx-auto w-full max-w-md px-72 pt-4'>
             <NavLink to="/">
