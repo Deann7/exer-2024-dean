@@ -12,17 +12,18 @@ const Home = () => {
                 <NavLink to="/temp">
                   <button
                     type='link'
-                    className='bg-blue-600 text-white py-6 px-24 rounded-lg items-center justify-center text-lg font-serif font-bold'
+                    className='bg-gradient-to-r from-green-400 to-purple-400 text-gray-600 py-6 px-24 rounded-lg items-center justify-center text-lg font-serif font-extrabold'
                   >
                     Temperature Converter
                   </button>
+
                   </NavLink>
                 </div>
                 <div className='pt-28 items-center h-0.5 justify-center px-12'>
                 <NavLink to="/curr">
                   <button
                     type='link'
-                    className='bg-blue-600 text-white py-6 px-24 rounded-lg items-center justify-center text-lg font-serif font-bold'
+                    className='bg-gradient-to-l from-red-400 to-sky-400 text-white py-6 px-24 rounded-lg items-center justify-center text-lg font-serif font-bold'
                   >
                     Currency Converter
                   </button>
