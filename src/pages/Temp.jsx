@@ -6,10 +6,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse } from '@fortawesome/free-solid-svg-icons';
 
 const Temp = () => {
-    const [banyak, setBanyak] = useState(null);
+    const [banyak, setBanyak] = useState('');
     const [suhuSatu, setSuhuSatu] = useState("c");
     const [suhuDua, setSuhuDua] = useState("k");
-    const [hasil, setHasil] = useState(0);
+    const [hasil, setHasil] = useState('');
     const [persamaan, setPersamaan] = useState("....");
 
     const swap = () => {
