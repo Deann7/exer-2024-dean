@@ -11,12 +11,11 @@ function InputBox({
   selectedCurrency = 'usd',
   amountDisabled = false,
   currrencyDisabled = false,
-  className = '',
 }) {
   const id = useId(); // Jika melakukan klik pada id maka dia akan langsung ke input amount
   const isAmountProvided = amount !== ''; // Handling untuk input amount
   return (
-    <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
+    <div className={`bg-white p-3 rounded-lg text-sm flex`}>
       <div className='w-1/2'>
         <label className='text-black/40 mb-2 inline-block' htmlFor={id}>
           {label}
@@ -51,14 +50,12 @@ function InputBox({
 
 InputBox.propTypes = { // tipe data
   label: PropTypes.string.isRequired,
-  amount: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  amount: PropTypes.number.isRequired,
   onAmountChange: PropTypes.func.isRequired, 
   onCurrencyChange: PropTypes.func.isRequired,
-  currencyOptions: PropTypes.array.isRequired, 
   selectedCurrency: PropTypes.string.isRequired,
   amountDisabled: PropTypes.bool.isRequired,
   currrencyDisabled: PropTypes.bool.isRequired,
-  className: PropTypes.string.isRequired,
 };
 
 export default InputBox;
