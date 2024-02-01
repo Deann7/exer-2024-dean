@@ -15,11 +15,12 @@ function Curr() {
   const currencyInfo = useCurrencyInfo(from)
 
   const swap = () => {
-    setFrom(to)
-    setTo(from)
-    setConvertedAmount(setAmount)
-    setAmount(setConvertedAmount)
+    setFrom(to);
+    setTo(from);
+    setConvertedAmount(amount);
+    setAmount(convertedAmount);
   }
+  
 
   const convert = () => {
     if (from === "btc" || to === "btc" ){
@@ -82,7 +83,6 @@ function Curr() {
               amount={convertedAmount}
               onCurrencyChange={(currency) => setTo(currency)}
               selectedCurrency={to}
-              amountDisabled
             />
           </div>
           <div className='relative w-full h-0.5'>
