@@ -9,8 +9,6 @@ function InputBox({
   onAmountChange,
   onCurrencyChange,
   selectedCurrency = 'usd',
-  amountDisabled = false,
-  currrencyDisabled = false,
 }) {
   const id = useId(); // Jika melakukan klik pada id maka dia akan langsung ke input amount
   const isAmountProvided = amount !== ''; // Handling untuk input amount
@@ -25,7 +23,6 @@ function InputBox({
           type="number"
           className='outline-none w-full bg-transparent py-1.5'
           placeholder={isAmountProvided ? 'Amount' : 'Amount'}
-          disabled={amountDisabled}
           value={amount || ''}
           onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}
         />
@@ -35,7 +32,6 @@ function InputBox({
         <select
           className='rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none'
           value={selectedCurrency}
-          disabled={currrencyDisabled}
           onChange={(e) => onCurrencyChange && onCurrencyChange(e.target.value)}
         >
           <option value='idr'>IDR</option>
@@ -54,8 +50,6 @@ InputBox.propTypes = { // tipe data
   onAmountChange: PropTypes.func.isRequired, 
   onCurrencyChange: PropTypes.func.isRequired,
   selectedCurrency: PropTypes.string.isRequired,
-  amountDisabled: PropTypes.bool.isRequired,
-  currrencyDisabled: PropTypes.bool.isRequired,
 };
 
 export default InputBox;
