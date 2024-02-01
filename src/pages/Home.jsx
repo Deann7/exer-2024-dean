@@ -30,7 +30,7 @@ const Home = () => {
                   </NavLink>
                 </div>
                 </div>
-            <div className='pt-32'>
+            <div className='pt-48'>
             <div className='w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30 size-28'>
               <h1 className='text-biru font-serif font-bold text-center text-xl'> OPREC EXERCISE 2024</h1>
               <p className="text-cream font-serif font-bold text-center text-lg">Deandro Najwan Ahmad Syahbanna <br/> Teknik Komputer - 2023</p>
